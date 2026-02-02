@@ -50,7 +50,7 @@ LOG = logging.getLogger(__name__)
 premium_data = {}
 
 # Define the owner ID
-owner_id = 7834875502
+owner_id = 8342427239
 
 # Initialize bot with environment variables
 bot = Client(
@@ -65,7 +65,7 @@ bot = Client(
 premium_data = {}
 
 # Replace with your Telegram channel ID where you want to send logs
-CHANNEL_ID = "-1002578737957"
+CHANNEL_ID = "-1003867912561"
 
 
 #--------------------my plan ---------------------------------------------------------------
@@ -149,7 +149,7 @@ async def give_premium_cmd_handler(client, message: Message):
                 )
                 
                 await client.send_message(
-                    chat_id=-1002578737957,  # Replace with your actual channel ID
+                    chat_id=-1003867912561,  # Replace with your actual channel ID
                     text=f"#Added_Premium\n\n👤 ᴜꜱᴇʀ : {user.mention}\n⚡ ᴜꜱᴇʀ ɪᴅ : <code>{user_id}</code>\n⏰ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇꜱꜱ : <code>{time}</code>\n\n⏳ ᴊᴏɪɴɪɴɢ ᴅᴀᴛᴇ : {current_time}\n\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}",
                     disable_web_page_preview=True
                 )
@@ -242,13 +242,13 @@ async def check_expiry():
                 expiry_str_in_ist = expiry_ist.strftime("%d-%m-%Y %I:%M:%S %p")
                 # Send message to channel
                 await app.send_message(
-                    chat_id=-1002578737957,
+                    chat_id=-1003867912561,
                     text=f"Premium plan expired for User ID: {user_id}\nExpiry time: {expiry_str_in_ist}"
                 )
 
                 # Notify bot owner
                 await app.send_message(
-                    chat_id=7834875502,
+                    chat_id=8342427239,
                     text=f"Premium plan expired for User ID: {user_id}\nExpiry time: {expiry_str_in_ist}"
                 )
 
